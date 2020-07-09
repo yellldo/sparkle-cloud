@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: sparkle-provider
+  profiles:
+    active: dev
