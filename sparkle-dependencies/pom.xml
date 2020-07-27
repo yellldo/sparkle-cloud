@@ -102,6 +102,7 @@
                 <version>${logback.version}</version>
             </dependency>
         </dependencies>
+
     </dependencyManagement>
 
 </project>
