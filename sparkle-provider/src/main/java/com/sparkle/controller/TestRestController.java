@@ -24,6 +24,7 @@ public class TestRestController {
 
     @PostMapping("/")
     public void test() {
+
         log.info("{}", test);
     }
 

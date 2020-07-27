@@ -14,6 +14,7 @@
         <module>sparkle-consumer</module>
         <module>sparkle-gateway</module>
         <module>sparkle-dependencies</module>
+        <module>sparkle-common</module>
     </modules>
     <artifactId>sparkle</artifactId>
     <version>1.0.0-SNAPSHOT</version>
