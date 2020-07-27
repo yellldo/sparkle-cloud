@@ -1,12 +1,17 @@
 package com.sparkle.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sparkle.exception.CustomException;
+import com.sparkle.model.FeignFailResult;
 import feign.Response;
-import feign.codec.DecodeException;
+import feign.Util;
 import feign.codec.ErrorDecoder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
+import org.springframework.util.StringUtils;
 
-import static feign.FeignException.errorStatus;
+import java.io.IOException;
 
 /**
  * ClassName : StashErrorDecoder<br>
@@ -22,13 +27,25 @@ public class StashErrorDecoder implements ErrorDecoder {
 
     @Override
     public Exception decode(String methodKey, Response response) {
+        Exception exception = null;
+        ObjectMapper mapper = new ObjectMapper();
+
         log.info("进来了");
-        if (response.status() >= 400 && response.status() <= 499) {
-            return new RuntimeException();
+        try {
+            String body = Util.toString(response.body().asReader());
+            exception = new RuntimeException(body);
+
+            if (StringUtils.isEmpty(body)) {
+                return null;
+            }
+            FeignFailResult result = mapper.readValue(body, FeignFailResult.class);
+            // 业务异常包装成自定义异常类MyException
+            if (result.getStatus() != HttpStatus.OK.value()) {
+                exception = new CustomException(result.getMessage(), result.getStatus());
+            }
+        } catch (IOException e) {
+            log.error(e.getMessage(), e);
         }
-        if (response.status() >= 500 && response.status() <= 599) {
-            return new RuntimeException(response.reason());
-        }
-        return errorStatus(methodKey, response);
+        return exception;
     }
 }

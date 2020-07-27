@@ -23,7 +23,6 @@ public enum CommonResponseEnum implements CommonExceptionAssert {
     // 服务器异常，无法识别的异常，尽可能对同归判断减少未定义异常抛出
     SERVER_ERROR(202, "网络异常");
 
-
     private int code;
 
     private String message;

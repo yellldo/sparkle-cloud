@@ -19,7 +19,7 @@ public class BaseException extends RuntimeException {
     /**
      * 返回码
      */
-    protected IResponse response;
+    private IResponse response;
 
     /**
      * 异常消息参数
@@ -27,9 +27,9 @@ public class BaseException extends RuntimeException {
     protected Object[] args;
 
 
-    public BaseException(IResponse iResponse) {
-        super(iResponse.getMessage());
-        this.response = iResponse;
+    public BaseException(IResponse response) {
+        super(response.getMessage());
+        this.response = response;
     }
 
     public BaseException(String message, IResponse response) {
