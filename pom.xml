@@ -10,7 +10,7 @@
     </parent>
     <packaging>pom</packaging>
     <modules>
-        <module>sprakle-provider</module>
+        <module>sparkle-provider</module>
         <module>sparkle-consumer</module>
         <module>sparkle-gateway</module>
         <module>sparkle-dependencies</module>
