@@ -1,5 +1,6 @@
 package com.sparkle.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 /**
@@ -11,6 +12,7 @@ import lombok.Data;
  * @date : 2020/7/27 18:31
  **/
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class FeignFailResult {
 
     private String message;
