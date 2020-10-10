@@ -1,0 +1,10 @@
+server:
+  port: 8089
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 198.148.123.187:8848
+#      config:
+#        server-addr: 198.148.123.187:8848
+#        file-extension: yml
