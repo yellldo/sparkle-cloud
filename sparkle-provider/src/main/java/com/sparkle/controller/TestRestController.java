@@ -1,8 +1,11 @@
 package com.sparkle.controller;
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
+import com.sparkle.dto.TestIn;
 import com.sparkle.exception.CommonResponseEnum;
+import com.sparkle.model.R;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,9 +27,15 @@ public class TestRestController {
     private String test;
 
     @PostMapping("/")
-    public void test() {
-        CommonResponseEnum.SERVER_ERROR.assertIsNull("");
+    public R test(TestIn testIn) {
+//        CommonResponseEnum.SERVER_ERROR.assertIsNull("");
         log.info("{}", test);
+        return R.ok(testIn);
+    }
+
+    @GetMapping("/")
+    public R get() {
+        return R.ok("12345");
     }
 
 }
