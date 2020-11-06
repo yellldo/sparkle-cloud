@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: mq-exercise
+  rabbitmq:
+    addresses: 181.214.88.183
+    username: guest
+    password: guest
+    port: 15672
+server:
+  port: 8099
