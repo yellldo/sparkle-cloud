@@ -111,19 +111,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <repositories>
-        <repository>
-            <id>aliyun-repos</id>
-            <url>https://maven.aliyun.com/repository/central</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>maven-releases</id>
-            <name>maven-releases-repository</name>
-            <url>http://101.200.80.154:8081/repository/maven-releases/</url>
-        </repository>
-    </repositories>
 </project>

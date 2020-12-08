@@ -3,9 +3,13 @@ spring:
     nacos:
       discovery:
         server-addr: 198.148.123.187:8848
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://198.148.123.187:13306/nacos_config?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useTimezone=true&useSSL=false
 #      config:
 #        server-addr: 198.148.123.187:8848
 #        file-extension: yml
-
 server:
   port: 8001
