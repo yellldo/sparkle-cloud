@@ -3,6 +3,9 @@ spring:
     nacos:
       discovery:
         server-addr: 198.148.123.187:8848
+    gateway:
+      httpclient:
+        connect-timeout:
 #      config:
 #        server-addr: 181.214.88.183:8848
 #        file-extension: yml

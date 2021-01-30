@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: sparkle-register
+  profiles:
+    active: dev

@@ -1,10 +1,9 @@
 package com.sparkle.controller;
 
-import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.sparkle.dto.TestIn;
-import com.sparkle.exception.CommonResponseEnum;
 import com.sparkle.model.R;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,13 +22,13 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class TestRestController {
 
-    @NacosValue("${test}")
-    private String test;
+    @Value("@{server.port}")
+    private String port;
 
     @PostMapping("/")
     public R test(TestIn testIn) {
 //        CommonResponseEnum.SERVER_ERROR.assertIsNull("");
-        log.info("{}", test);
+        log.info("{}", port);
         return R.ok(testIn);
     }
 
