@@ -1,10 +1,6 @@
 server:
-  port: 8089
-spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 198.148.123.187:8848
-#      config:
-#        server-addr: 198.148.123.187:8848
-#        file-extension: yml
+  port: ${random.int(10000)}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
