@@ -1,5 +1,5 @@
 spring:
   application:
-    name: sparkle-provider
+    name: sparkle-gateway
   profiles:
     active: dev
