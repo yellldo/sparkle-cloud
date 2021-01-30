@@ -1,7 +1,5 @@
 package com.sparkle.controller;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.sparkle.feign.TestFeignClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,14 +27,6 @@ public class TestController {
     public void test() {
 
 //        testFeignClient.test();
-    }
-
-    public static void main(String[] args) {
-        JSONObject jsonObject = new JSONObject();
-        JSONArray jsonArray = new JSONArray();
-        jsonArray.add("1");
-        jsonObject.put("data", jsonArray);
-        log.info("{}",jsonObject);
     }
 
 }

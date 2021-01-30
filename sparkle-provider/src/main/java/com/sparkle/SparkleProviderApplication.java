@@ -3,6 +3,7 @@ package com.sparkle;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * ClassName : SparkleProviderApplication<br>
@@ -13,6 +14,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  * @date : 2020/7/9 15:23
  **/
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+@EnableEurekaClient
 public class SparkleProviderApplication {
 
     public static void main(String[] args) {

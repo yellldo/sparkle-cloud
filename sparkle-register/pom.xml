@@ -12,11 +12,7 @@
     <artifactId>sparkle-register</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-            <version>${spring-boot-dependencies.version}</version>
-        </dependency>
+
     </dependencies>
 
 
