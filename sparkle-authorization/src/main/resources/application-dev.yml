@@ -4,3 +4,16 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.227.177.107:13306/test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b7
+  redis:
+    host: 192.227.177.107
+    port: 16379
+    password: gzzgdnz
+logging:
+  level:
+    com.sparkle: info
