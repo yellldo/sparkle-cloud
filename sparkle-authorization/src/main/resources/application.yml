@@ -3,3 +3,11 @@ spring:
     name: sparkle-authorization
   profiles:
     active: dev
+logging:
+  level:
+    com.sparkle: info
+server:
+  undertow:
+    buffer-size: 1024
+    direct-buffers: on
+    always-set-keep-alive: true

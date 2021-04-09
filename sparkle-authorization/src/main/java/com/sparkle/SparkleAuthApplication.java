@@ -6,8 +6,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 
 /**
- * ClassName : AuthApplication<br>
- * Description : AuthApplication<br>
+ * ClassName : SparkleAuthApplication<br>
+ * Description : SparkleAuthApplication<br>
  *
  * @author : sj
  * @version : 1.0.0
@@ -16,10 +16,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @SpringBootApplication
 @EnableEurekaClient
 @EnableAuthorizationServer
-public class AuthApplication {
+public class SparkleAuthApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AuthApplication.class, args);
+        SpringApplication.run(SparkleAuthApplication.class, args);
     }
 
 }

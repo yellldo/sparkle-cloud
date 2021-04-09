@@ -13,8 +13,8 @@
 
     <properties>
         <sparkle.version>1.0.0-SNAPSHOT</sparkle.version>
-        <spring-boot-dependencies.version>2.0.3.RELEASE</spring-boot-dependencies.version>
-        <spring-cloud-dependencies.version>Finchley.RELEASE</spring-cloud-dependencies.version>
+        <spring-boot-dependencies.version>2.3.9.RELEASE</spring-boot-dependencies.version>
+        <spring-cloud-dependencies.version>Hoxton.SR10</spring-cloud-dependencies.version>
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -29,8 +29,8 @@
         <hutools.version>5.4.0</hutools.version>
         <slf4j.version>1.7.25</slf4j.version>
         <fastjson.version>1.2.47</fastjson.version>
+        <mysql.version>8.0.23</mysql.version>
     </properties>
-
 
     <dependencyManagement>
         <dependencies>
@@ -103,6 +103,16 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+            <version>${spring-boot-dependencies.version}</version>
         </dependency>
     </dependencies>
 </project>
