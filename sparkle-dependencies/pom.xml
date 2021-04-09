@@ -114,5 +114,11 @@
             <artifactId>spring-boot-starter-undertow</artifactId>
             <version>${spring-boot-dependencies.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 </project>
