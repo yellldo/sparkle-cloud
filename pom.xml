@@ -17,7 +17,7 @@
         <module>sparkle-common</module>
         <module>sparkle-register</module>
     </modules>
-    <artifactId>sparkle-cloud</artifactId>
+    <artifactId>sparkle</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <dependencies>
@@ -43,6 +43,7 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.3.2</version>
         </dependency>
     </dependencies>
 
