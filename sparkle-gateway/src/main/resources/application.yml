@@ -5,7 +5,7 @@ spring:
     active: dev
 logging:
   level:
-    com.sparkle: info
+    com.sparkle: trace
 server:
   undertow:
     buffer-size: 1024

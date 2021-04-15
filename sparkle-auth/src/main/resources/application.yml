@@ -1,11 +1,11 @@
 spring:
   application:
-    name: sparkle-provider
+    name: sparkle-authorization
   profiles:
     active: dev
-logging:
-  level:
-    com.sparkle: trace
+#logging:
+#  level:
+#    com.sparkle: info
 server:
   undertow:
     buffer-size: 1024

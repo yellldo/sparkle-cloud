@@ -1,0 +1,47 @@
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+spring:
+  thymeleaf:
+    cache: false
+  mvc:
+    static-path-pattern: /**
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.227.177.107:13306/test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b7
+  redis:
+    host: 192.227.177.107
+    port: 16379
+    password: gzzgdnz
+  resources:
+    static-locations: classpath:/static/,classpath:/public/,classpath:templates
+security:
+  oauth2:
+    authorization:
+      check-token-access: true
+#mybatis plus 配置
+mybatis-plus:
+  configuration:
+    #数据库字段映射java属性名是否开启自动驼峰命名，默认值为true
+    map-underscore-to-camel-case: true
+    #当有多个参数时，如果没有@Param注解，默认使用参数名作为别名，否则默认使用索引作为别名
+    use-actual-param-name: true
+  global-config:
+    banner: false
+    db-config:
+      #全局默认的主键类型，分配ID (主键类型为number或string），默认实现为雪花算法
+      id-type: assign_id
+      #表名是否使用驼峰转下划线命名,只对表名生效（默认值为true）
+      table-underline: true
+  type-aliases-package: com.sparkle.auth.entity
+  mapper-locations:
+    - classpath:mapper/*.xml
