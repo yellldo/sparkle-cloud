@@ -15,10 +15,8 @@
         <module>sparkle-gateway</module>
         <module>sparkle-dependencies</module>
         <module>sparkle-common</module>
-        <module>sparkle-register</module>
         <module>sparkle-authorization</module>
         <module>sparkle-auth</module>
-        <module>sparkle-generator</module>
     </modules>
     <artifactId>sparkle</artifactId>
     <version>1.0.0-SNAPSHOT</version>
