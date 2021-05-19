@@ -1,4 +1,4 @@
-package com.sparkle.entity;
+package com.sparkle.domain;
 
 import lombok.ToString;
 
