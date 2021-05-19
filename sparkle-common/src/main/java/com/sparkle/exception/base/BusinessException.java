@@ -1,6 +1,6 @@
 package com.sparkle.exception.base;
 
-import com.sparkle.entity.R;
+import com.sparkle.domain.R;
 import com.sparkle.exception.BaseException;
 import com.sparkle.exception.IErrorCode;
 import lombok.Getter;

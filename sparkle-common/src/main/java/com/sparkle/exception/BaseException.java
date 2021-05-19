@@ -1,6 +1,6 @@
 package com.sparkle.exception;
 
-import com.sparkle.entity.R;
+import com.sparkle.domain.R;
 import lombok.Data;
 
 /**
