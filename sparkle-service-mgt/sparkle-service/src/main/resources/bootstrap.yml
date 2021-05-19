@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: sparkle-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 181.214.88.183:8848
+        namespace: 8e0308ee-077b-4503-9867-4f819f9800e3
+      config:
+        namespace: 8e0308ee-077b-4503-9867-4f819f9800e3
+        server-addr: 181.214.88.183:8848
+        file-extension: yml
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+mybatis-plus:
+  type-aliases-package: com.sparkle.service.entity
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    jdbc-type-for-null: null
+  global-config:
+    # 关闭 mybatis-plus的 banner
+    banner: false
