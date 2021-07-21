@@ -42,7 +42,7 @@
         <mysql.version>8.0.23</mysql.version>
         <mybatisplus.version>3.2.0</mybatisplus.version>
         <commons-lang3.version>3.9</commons-lang3.version>
-        <commons-io.version>2.6</commons-io.version>
+        <commons-io.version>2.11.0</commons-io.version>
         <dynamic.datasource.version>2.5.7</dynamic.datasource.version>
         <p6spy.version>3.8.1</p6spy.version>
     </properties>
