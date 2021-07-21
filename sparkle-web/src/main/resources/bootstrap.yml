@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: sparkle-web
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 181.214.88.183:8848
+        namespace: 8e0308ee-077b-4503-9867-4f819f9800e3
+      config:
+        file-extension: yml
+        server-addr: 181.214.88.183:8848
+        namespace: 8e0308ee-077b-4503-9867-4f819f9800e3
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}

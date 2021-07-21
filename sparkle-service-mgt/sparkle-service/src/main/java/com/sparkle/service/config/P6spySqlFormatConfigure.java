@@ -1,4 +1,4 @@
-package com.sparkle.servie.config;
+package com.sparkle.service.config;
 
 import com.p6spy.engine.spy.appender.MessageFormattingStrategy;
 import com.sparkle.util.DateUtil;

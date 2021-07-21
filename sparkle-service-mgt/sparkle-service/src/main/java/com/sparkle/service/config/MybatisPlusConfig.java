@@ -1,4 +1,4 @@
-package com.sparkle.servie.config;
+package com.sparkle.service.config;
 
 import com.baomidou.mybatisplus.core.parser.ISqlParser;
 import com.baomidou.mybatisplus.extension.parsers.BlockAttackSqlParser;
