@@ -9,22 +9,131 @@
     <artifactId>sparkle</artifactId>
     <version>${revision}</version>
 
+    <modules>
+        <module>sparkle-gateway</module>
+        <module>sparkle-common</module>
+        <module>sparkle-user-mgt</module>
+        <module>sparkle-job</module>
+        <module>sparkle-auth</module>
+    </modules>
+
     <properties>
         <revision>1.0-SNAPSHOT</revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <main.basedir>${basedir}</main.basedir>
+        <java.version>1.8</java.version>
+        <spring-cloud-alibaba-dependencies.version>2.2.5.RELEASE</spring-cloud-alibaba-dependencies.version>
+        <spring-boot-dependencies.version>2.3.9.RELEASE</spring-boot-dependencies.version>
+        <spring-cloud-dependencies.version>Hoxton.SR10</spring-cloud-dependencies.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven-compiler.version>3.3</maven-compiler.version>
+        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+        <maven-enforcer-plugin.version>3.0.0-M2</maven-enforcer-plugin.version>
+        <flatten-maven-plugin.version>1.0.1</flatten-maven-plugin.version>
+        <logback.version>1.2.3</logback.version>
+        <sl4j.version>1.7.30</sl4j.version>
+        <servlet-api.version>3.1.0</servlet-api.version>
+        <guava.version>30.1.1-jre</guava.version>
+        <gson.version>2.8.5</gson.version>
+        <lombok.version>1.18.10</lombok.version>
+        <hutool.version>4.6.8</hutool.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <fastjson.version>1.2.60</fastjson.version>
+        <mysql.version>8.0.23</mysql.version>
+        <mybatisplus.version>3.2.0</mybatisplus.version>
+        <commons-lang3.version>3.9</commons-lang3.version>
+        <commons-io.version>2.11.0</commons-io.version>
+        <dynamic.datasource.version>2.5.7</dynamic.datasource.version>
+        <p6spy.version>3.8.1</p6spy.version>
+        <springfox.version>3.0.0</springfox.version>
     </properties>
 
-    <modules>
-        <module>sparkle-gateway</module>
-        <module>sparkle-common</module>
-        <module>sparkle-dependencies</module>
-        <module>sparkle-parents</module>
-        <module>sparkle-user-mgt</module>
-        <module>sparkle-job</module>
-    </modules>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${dynamic.datasource.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
+            </dependency>
+            <!-- 通用Java工具类库-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>p6spy</groupId>
+                <artifactId>p6spy</artifactId>
+                <version>${p6spy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
