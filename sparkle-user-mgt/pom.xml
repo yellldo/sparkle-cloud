@@ -3,18 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>sparkle-service-mgt</artifactId>
+        <artifactId>sparkle</artifactId>
         <groupId>com.sparkle.cloud</groupId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sparkle-service-api</artifactId>
+    <artifactId>sparkle-user-mgt</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>sparkle-user</module>
+        <module>sparkle-user-api</module>
+    </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-    </dependencies>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
 </project>

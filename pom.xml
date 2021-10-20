@@ -19,10 +19,10 @@
     <modules>
         <module>sparkle-gateway</module>
         <module>sparkle-common</module>
-        <module>sparkle-service-mgt</module>
-        <module>sparkle-web</module>
         <module>sparkle-dependencies</module>
         <module>sparkle-parents</module>
+        <module>sparkle-user-mgt</module>
+        <module>sparkle-job</module>
     </modules>
 
 
