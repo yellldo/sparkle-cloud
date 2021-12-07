@@ -11,6 +11,7 @@
 
     <modules>
         <module>sparkle-common</module>
+        <module>sparkle-base</module>
     </modules>
 
     <properties>
@@ -44,6 +45,7 @@
         <dynamic.datasource.version>2.5.7</dynamic.datasource.version>
         <p6spy.version>3.8.1</p6spy.version>
         <springfox.version>3.0.0</springfox.version>
+        <dubbo.version>2.7.14</dubbo.version>
     </properties>
 
     <dependencyManagement>
@@ -56,11 +58,9 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud-dependencies.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>
@@ -73,11 +73,6 @@
                 <version>${mybatisplus.version}</version>
             </dependency>
             <!-- 通用Java工具类库-->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>1.2.77</version>
-            </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
