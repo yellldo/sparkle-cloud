@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.base.mapper.CompanyMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.base.entity.Company">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="cid" column="cid" jdbcType="BIGINT"/>
+        <result property="base" column="base" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="nameEn" column="name_en" jdbcType="VARCHAR"/>
+        <result property="nameAlias" column="name_alias" jdbcType="VARCHAR"/>
+        <result property="historyNames" column="history_names" jdbcType="VARCHAR"/>
+        <result property="legalEntityId" column="legal_entity_id" jdbcType="BIGINT"/>
+        <result property="legalEntityType" column="legal_entity_type" jdbcType="INTEGER"/>
+        <result property="regNumber" column="reg_number" jdbcType="VARCHAR"/>
+        <result property="companyOrgType" column="company_org_type" jdbcType="VARCHAR"/>
+        <result property="regLocation" column="reg_location" jdbcType="VARCHAR"/>
+        <result property="estiblishTime" column="estiblish_time" jdbcType="TIMESTAMP"/>
+        <result property="fromTime" column="from_time" jdbcType="TIMESTAMP"/>
+        <result property="toTime" column="to_time" jdbcType="TIMESTAMP"/>
+        <result property="businessScope" column="business_scope" jdbcType="VARCHAR"/>
+        <result property="regInstitute" column="reg_institute" jdbcType="VARCHAR"/>
+        <result property="approvedTime" column="approved_time" jdbcType="TIMESTAMP"/>
+        <result property="regStatus" column="reg_status" jdbcType="VARCHAR"/>
+        <result property="regCapital" column="reg_capital" jdbcType="VARCHAR"/>
+        <result property="orgNumber" column="org_number" jdbcType="VARCHAR"/>
+        <result property="orgApprovedInstitute" column="org_approved_institute" jdbcType="VARCHAR"/>
+        <result property="currentCid" column="current_cid" jdbcType="BIGINT"/>
+        <result property="parentCid" column="parent_cid" jdbcType="BIGINT"/>
+        <result property="companyType" column="company_type" jdbcType="INTEGER"/>
+        <result property="creditCode" column="credit_code" jdbcType="VARCHAR"/>
+        <result property="score" column="score" jdbcType="VARCHAR"/>
+        <result property="categoryCode" column="category_code" jdbcType="VARCHAR"/>
+        <result property="lat" column="lat" jdbcType="DECIMAL"/>
+        <result property="lng" column="lng" jdbcType="DECIMAL"/>
+        <result property="areaCode" column="area_code" jdbcType="INTEGER"/>
+        <result property="regCapitalAmount" column="reg_capital_amount" jdbcType="BIGINT"/>
+        <result property="regCapitalCurrency" column="reg_capital_currency" jdbcType="VARCHAR"/>
+        <result property="actualCapitalAmount" column="actual_capital_amount" jdbcType="BIGINT"/>
+        <result property="actualCapitalCurrency" column="actual_capital_currency" jdbcType="VARCHAR"/>
+        <result property="regStatusStd" column="reg_status_std" jdbcType="VARCHAR"/>
+        <result property="socialSecurityStaffNum" column="social_security_staff_num" jdbcType="INTEGER"/>
+        <result property="cancelDate" column="cancel_date" jdbcType="TIMESTAMP"/>
+        <result property="cancelReason" column="cancel_reason" jdbcType="VARCHAR"/>
+        <result property="revokeDate" column="revoke_date" jdbcType="TIMESTAMP"/>
+        <result property="revokeReason" column="revoke_reason" jdbcType="VARCHAR"/>
+        <result property="emails" column="emails" jdbcType="VARCHAR"/>
+        <result property="phones" column="phones" jdbcType="VARCHAR"/>
+        <result property="wechatPublicNum" column="wechat_public_num" jdbcType="VARCHAR"/>
+        <result property="logo" column="logo" jdbcType="VARCHAR"/>
+        <result property="crawledTime" column="crawled_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="deleted" column="deleted" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,cid,base,
+        name,name_en,name_alias,
+        history_names,legal_entity_id,legal_entity_type,
+        reg_number,company_org_type,reg_location,
+        estiblish_time,from_time,to_time,
+        business_scope,reg_institute,approved_time,
+        reg_status,reg_capital,org_number,
+        org_approved_institute,current_cid,parent_cid,
+        company_type,credit_code,score,
+        category_code,lat,lng,
+        area_code,reg_capital_amount,reg_capital_currency,
+        actual_capital_amount,actual_capital_currency,reg_status_std,
+        social_security_staff_num,cancel_date,cancel_reason,
+        revoke_date,revoke_reason,emails,
+        phones,wechat_public_num,logo,
+        crawled_time,create_time,update_time,
+        deleted
+    </sql>
+</mapper>
