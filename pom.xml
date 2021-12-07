@@ -10,11 +10,7 @@
     <version>${revision}</version>
 
     <modules>
-        <module>sparkle-gateway</module>
         <module>sparkle-common</module>
-        <module>sparkle-user-mgt</module>
-        <module>sparkle-job</module>
-        <module>sparkle-auth</module>
     </modules>
 
     <properties>
@@ -67,13 +63,6 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring-cloud-alibaba-dependencies.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
                 <version>${dynamic.datasource.version}</version>
@@ -87,7 +76,7 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
+                <version>1.2.77</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -134,18 +123,5 @@
             <version>${hutool.version}</version>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
