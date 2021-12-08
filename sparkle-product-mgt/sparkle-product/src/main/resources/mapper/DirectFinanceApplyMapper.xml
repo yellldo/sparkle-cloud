@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.product.mapper.DirectFinanceApplyMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.product.entity.DirectFinanceApply">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="financeId" column="finance_id" jdbcType="BIGINT"/>
+        <result property="financeName" column="finance_name" jdbcType="VARCHAR"/>
+        <result property="applyPhone" column="apply_phone" jdbcType="VARCHAR"/>
+        <result property="entId" column="ent_id" jdbcType="BIGINT"/>
+        <result property="orgId" column="org_id" jdbcType="BIGINT"/>
+        <result property="financeAmount" column="finance_amount" jdbcType="DECIMAL"/>
+        <result property="loanAmount" column="loan_amount" jdbcType="DECIMAL"/>
+        <result property="loanTime" column="loan_time" jdbcType="TIMESTAMP"/>
+        <result property="businessFiles" column="business_files" jdbcType="VARCHAR"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+        <result property="financeStatus" column="finance_status" jdbcType="CHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="auditRemark" column="audit_remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,finance_id,finance_name,
+        apply_phone,ent_id,org_id,
+        finance_amount,loan_amount,loan_time,
+        business_files,remark,finance_status,
+        create_time,audit_remark
+    </sql>
+</mapper>
