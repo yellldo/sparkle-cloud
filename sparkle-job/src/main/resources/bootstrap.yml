@@ -1,6 +1,6 @@
 spring:
   application:
-    name: sparkle-gateway
+    name: sparkle-job
   profiles:
     active: dev
   cloud:
@@ -12,16 +12,6 @@ spring:
           - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
       discovery:
         server-addr: 173.82.52.80:8848
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-      routes:
-        - id: sparkle-user
-          uri: lb://sparkle-user
-          predicates:
-            - Path=/api/sparkle-user/**
 logging:
   level:
     com.sparkle: trace

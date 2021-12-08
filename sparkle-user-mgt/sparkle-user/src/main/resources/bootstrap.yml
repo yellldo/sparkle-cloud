@@ -1,6 +1,6 @@
 spring:
   application:
-    name: sparkle-gateway
+    name: sparkle-user
   profiles:
     active: dev
   cloud:
@@ -10,23 +10,17 @@ spring:
         file-extension: yml
         shared-configs:
           - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+        namespace: 8e0308ee-077b-4503-9867-4f819f9800e3
       discovery:
         server-addr: 173.82.52.80:8848
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-      routes:
-        - id: sparkle-user
-          uri: lb://sparkle-user
-          predicates:
-            - Path=/api/sparkle-user/**
+        namespace: 8e0308ee-077b-4503-9867-4f819f9800e3
 logging:
   level:
-    com.sparkle: trace
+    com.sparkle.user: trace
 server:
   undertow:
     buffer-size: 1024
     direct-buffers: on
     always-set-keep-alive: true
+  servlet:
+    context-path: /sparkle-user
