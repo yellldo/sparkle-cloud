@@ -11,7 +11,8 @@
 
     <modules>
         <module>sparkle-common</module>
-        <module>sparkle-base</module>
+        <module>sparkle-base-mgt</module>
+        <module>sparkle-product-mgt</module>
     </modules>
 
     <properties>
@@ -46,6 +47,7 @@
         <p6spy.version>3.8.1</p6spy.version>
         <springfox.version>3.0.0</springfox.version>
         <dubbo.version>2.7.14</dubbo.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
     </properties>
 
     <dependencyManagement>
@@ -74,16 +76,6 @@
             </dependency>
             <!-- 通用Java工具类库-->
             <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${commons-lang3.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
@@ -102,6 +94,11 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-boot-starter</artifactId>
                 <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

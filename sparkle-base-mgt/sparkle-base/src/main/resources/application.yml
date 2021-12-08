@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: sparkle-base
+server:
+  port: 9099
