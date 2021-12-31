@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.product.mapper.GuaranteeDemandMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.product.entity.GuaranteeDemand">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="applyPhone" column="apply_phone" jdbcType="VARCHAR"/>
+        <result property="guaranteeId" column="guarantee_id" jdbcType="BIGINT"/>
+        <result property="guaranteeName" column="guarantee_name" jdbcType="VARCHAR"/>
+        <result property="companyId" column="company_id" jdbcType="BIGINT"/>
+        <result property="orgId" column="org_id" jdbcType="BIGINT"/>
+        <result property="demandStatus" column="demand_status" jdbcType="CHAR"/>
+        <result property="amount" column="amount" jdbcType="DECIMAL"/>
+        <result property="amountUnit" column="amount_unit" jdbcType="CHAR"/>
+        <result property="term" column="term" jdbcType="VARCHAR"/>
+        <result property="termUnit" column="term_unit" jdbcType="CHAR"/>
+        <result property="demandDesc" column="demand_desc" jdbcType="VARCHAR"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+        <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,apply_phone,guarantee_id,
+        guarantee_name,company_id,org_id,
+        demand_status,amount,amount_unit,
+        term,term_unit,demand_desc,
+        create_date,update_date
+    </sql>
+</mapper>

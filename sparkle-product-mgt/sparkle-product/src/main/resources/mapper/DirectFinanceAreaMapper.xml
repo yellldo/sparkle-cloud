@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.product.mapper.DirectFinanceAreaMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.product.entity.DirectFinanceArea">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="financeId" column="finance_id" jdbcType="BIGINT"/>
+        <result property="ownAreaCode" column="own_area_code" jdbcType="INTEGER"/>
+        <result property="choiFlag" column="choi_flag" jdbcType="CHAR"/>
+        <result property="favoFlag" column="favo_flag" jdbcType="CHAR"/>
+        <result property="choiOrder" column="choi_order" jdbcType="INTEGER"/>
+        <result property="favoOrder" column="favo_order" jdbcType="INTEGER"/>
+        <result property="postStatus" column="post_status" jdbcType="CHAR"/>
+        <result property="areaLevel" column="area_level" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="updateUser" column="update_user" jdbcType="VARCHAR"/>
+        <result property="operUserId" column="oper_user_id" jdbcType="BIGINT"/>
+        <result property="operOrgId" column="oper_org_id" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,finance_id,own_area_code,
+        choi_flag,favo_flag,choi_order,
+        favo_order,post_status,area_level,
+        create_time,create_user,update_time,
+        update_user,oper_user_id,oper_org_id
+    </sql>
+</mapper>
