@@ -5,8 +5,7 @@
     <parent>
         <artifactId>sparkle</artifactId>
         <groupId>com.sparkle.cloud</groupId>
-        <version>1.0-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
+        <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
