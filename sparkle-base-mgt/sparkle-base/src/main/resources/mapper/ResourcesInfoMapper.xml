@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.base.mapper.ResourcesInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.base.entity.ResourcesInfo">
+        <id property="resId" column="res_id" jdbcType="BIGINT"/>
+        <result property="resIcon" column="res_icon" jdbcType="VARCHAR"/>
+        <result property="resUrl" column="res_url" jdbcType="VARCHAR"/>
+        <result property="resTitle" column="res_title" jdbcType="VARCHAR"/>
+        <result property="resName" column="res_name" jdbcType="VARCHAR"/>
+        <result property="resComponent" column="res_component" jdbcType="VARCHAR"/>
+        <result property="resHidden" column="res_hidden" jdbcType="TINYINT"/>
+        <result property="resLevel" column="res_level" jdbcType="INTEGER"/>
+        <result property="resShow" column="res_show" jdbcType="TINYINT"/>
+        <result property="resActive" column="res_active" jdbcType="VARCHAR"/>
+        <result property="parentId" column="parent_id" jdbcType="BIGINT"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="updateUser" column="update_user" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        res_id,res_icon,res_url,
+        res_title,res_name,res_component,
+        res_hidden,res_level,res_show,
+        res_active,parent_id,create_time,
+        create_user,update_time,update_user
+    </sql>
+</mapper>
