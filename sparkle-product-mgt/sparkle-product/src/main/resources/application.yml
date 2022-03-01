@@ -7,8 +7,8 @@ dubbo:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
+    username: shenjia
     password: 123456
-    url: jdbc:mysql://192.227.177.107:13306/finance_product?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2b8&useSSL=false
+    url: jdbc:mysql://localhost:3306/finance_product?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2b8&useSSL=false
   application:
     name: sparkle-product
