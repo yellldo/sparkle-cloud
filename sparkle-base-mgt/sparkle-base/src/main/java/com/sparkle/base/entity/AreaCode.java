@@ -1,12 +1,13 @@
 package com.sparkle.base.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.Date;
+
+import lombok.Data;
 
 /**
  * 字典表-行政区划码
@@ -18,7 +19,7 @@ public class AreaCode implements Serializable {
     /**
      *
      */
-    @TableId(value = "id")
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**

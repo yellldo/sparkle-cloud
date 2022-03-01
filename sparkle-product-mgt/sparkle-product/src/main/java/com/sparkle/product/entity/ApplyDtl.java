@@ -4,50 +4,58 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
-
 import lombok.Data;
 
 /**
- * 担保日志表
- *
- * @TableName guarantee_demand_log
+ * @TableName apply_dtl
  */
-@TableName(value = "guarantee_demand_log")
+@TableName(value = "apply_dtl")
 @Data
-public class GuaranteeDemandLog implements Serializable {
+public class ApplyDtl implements Serializable {
     /**
-     * 主键ID
+     * ID
      */
-    @TableField(value = "seq_id")
-    private Long seqId;
+    @TableId(value = "dtl_id")
+    private Long dtlId;
 
     /**
-     * 申请ID
+     * 融资申请ID
      */
     @TableField(value = "apply_id")
     private Long applyId;
 
     /**
-     * 操作明细表ID
+     * 银行代码
      */
-    @TableField(value = "dtl_id")
-    private Long dtlId;
+    @TableField(value = "bank_code")
+    private Integer bankCode;
 
     /**
-     * 机构号
+     * 银行名称
+     */
+    @TableField(value = "bank_name")
+    private String bankName;
+
+    /**
+     * 机构CODE
      */
     @TableField(value = "org_id")
     private Long orgId;
 
     /**
+     * 申请时间
+     */
+    @TableField(value = "apply_time")
+    private Date applyTime;
+
+    /**
      * 审核状态
      */
     @TableField(value = "audit_status")
-    private Integer auditStatus;
+    private String auditStatus;
 
     /**
      * 审批说明
@@ -59,7 +67,7 @@ public class GuaranteeDemandLog implements Serializable {
      * 审批时间
      */
     @TableField(value = "audit_time")
-    private Long auditTime;
+    private Date auditTime;
 
     /**
      * 审批人
@@ -74,28 +82,34 @@ public class GuaranteeDemandLog implements Serializable {
     private String auditUserName;
 
     /**
-     * 合同签订时间
+     * 放款时间
      */
-    @TableField(value = "guarantee_time")
-    private Date guaranteeTime;
+    @TableField(value = "credit_time")
+    private Date creditTime;
 
     /**
-     * 担保金额
+     * 放款额度
      */
-    @TableField(value = "guarantee_amt")
-    private BigDecimal guaranteeAmt;
+    @TableField(value = "credit_amt")
+    private BigDecimal creditAmt;
 
     /**
-     * 担保周期单位
+     * 放款利率
      */
-    @TableField(value = "guarantee_peri_unit")
-    private Integer guaranteePeriUnit;
+    @TableField(value = "credit_rate")
+    private BigDecimal creditRate;
 
     /**
-     * 担保周期
+     * 放款周期单位
      */
-    @TableField(value = "guarantee_peri")
-    private Integer guaranteePeri;
+    @TableField(value = "credit_peri_unit")
+    private Integer creditPeriUnit;
+
+    /**
+     * 放款周期
+     */
+    @TableField(value = "credit_peri")
+    private Integer creditPeri;
 
     /**
      * 备注
