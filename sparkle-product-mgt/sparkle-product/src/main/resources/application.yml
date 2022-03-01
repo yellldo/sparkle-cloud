@@ -1,0 +1,14 @@
+server:
+  port: 8091
+dubbo:
+  registry:
+    address: localhost:2181
+    protocol: zookeeper
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.227.177.107:13306/finance_product?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2b8&useSSL=false
+  application:
+    name: sparkle-product
