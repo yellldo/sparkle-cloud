@@ -2,6 +2,7 @@ package com.sparkle.base.mapper;
 
 import com.sparkle.base.entity.ResourcesInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * @author shenjia
@@ -9,6 +10,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @createDate 2022-03-01 14:15:59
  * @Entity com.sparkle.base.entity.ResourcesInfo
  */
+@Mapper
 public interface ResourcesInfoMapper extends BaseMapper<ResourcesInfo> {
 
 }

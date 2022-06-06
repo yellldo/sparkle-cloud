@@ -2,6 +2,7 @@ package com.sparkle.base.mapper;
 
 import com.sparkle.base.entity.SysDictInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * @author shenjia
@@ -9,6 +10,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @createDate 2022-03-01 14:31:52
  * @Entity com.sparkle.base.entity.SysDictInfo
  */
+@Mapper
 public interface SysDictInfoMapper extends BaseMapper<SysDictInfo> {
 
 }
