@@ -4,17 +4,22 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
  * 字典表-行政区划码
  * @TableName area_code
  */
 @TableName(value = "area_code")
-@Data
+@Getter
+@Setter
+@ToString
 public class AreaCode implements Serializable {
     /**
      *

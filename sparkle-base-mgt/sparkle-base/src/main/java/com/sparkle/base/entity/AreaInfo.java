@@ -3,15 +3,21 @@ package com.sparkle.base.entity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
-import lombok.Data;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
  * 地区表
  * @TableName area_info
  */
 @TableName(value = "area_info")
-@Data
+@Getter
+@Setter
+@ToString
 public class AreaInfo implements Serializable {
     /**
      * 主键

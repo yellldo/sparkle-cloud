@@ -1,6 +1,5 @@
 package com.sparkle.base.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -8,7 +7,9 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.util.Date;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
  * 资源表
@@ -16,7 +17,9 @@ import lombok.Data;
  * @TableName resources_info
  */
 @TableName(value = "resources_info")
-@Data
+@Getter
+@Setter
+@ToString
 public class ResourcesInfo implements Serializable {
     /**
      * 资源ID
