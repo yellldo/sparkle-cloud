@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.merchant.mapper.CfBmMerchantBankMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.merchant.entity.CfBmMerchantBank">
+        <id property="bankId" column="bank_id" jdbcType="BIGINT"/>
+        <result property="merchantId" column="merchant_id" jdbcType="BIGINT"/>
+        <result property="bankAccNo" column="bank_acc_no" jdbcType="VARCHAR"/>
+        <result property="bankAccName" column="bank_acc_name" jdbcType="VARCHAR"/>
+        <result property="bankBranchName" column="bank_branch_name" jdbcType="VARCHAR"/>
+        <result property="bankName" column="bank_name" jdbcType="VARCHAR"/>
+        <result property="bankBranchId" column="bank_branch_id" jdbcType="VARCHAR"/>
+        <result property="bankStatus" column="bank_status" jdbcType="CHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="CHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        bank_id,merchant_id,bank_acc_no,
+        bank_acc_name,bank_branch_name,bank_name,
+        bank_branch_id,bank_status,is_delete,
+        create_time,update_time
+    </sql>
+</mapper>

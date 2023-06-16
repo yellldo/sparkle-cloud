@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.merchant.mapper.CfBmMerchantContractHistoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.merchant.entity.CfBmMerchantContractHistory">
+        <id property="historyId" column="history_id" jdbcType="BIGINT"/>
+        <result property="merchantId" column="merchant_id" jdbcType="BIGINT"/>
+        <result property="fileUrl" column="file_url" jdbcType="VARCHAR"/>
+        <result property="historyStatus" column="history_status" jdbcType="CHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="CHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        history_id,merchant_id,file_url,
+        history_status,is_delete,create_time,
+        update_time
+    </sql>
+</mapper>

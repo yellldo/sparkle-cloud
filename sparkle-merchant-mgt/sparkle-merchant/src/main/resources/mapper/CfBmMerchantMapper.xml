@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.merchant.mapper.CfBmMerchantMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.merchant.entity.CfBmMerchant">
+        <id property="merchantId" column="merchant_id" jdbcType="BIGINT"/>
+        <result property="merchantName" column="merchant_name" jdbcType="VARCHAR"/>
+        <result property="merchantTag" column="merchant_tag" jdbcType="VARCHAR"/>
+        <result property="merchantIcon" column="merchant_icon" jdbcType="VARCHAR"/>
+        <result property="collectCount" column="collect_count" jdbcType="INTEGER"/>
+        <result property="evaluateCount" column="evaluate_count" jdbcType="INTEGER"/>
+        <result property="score" column="score" jdbcType="VARCHAR"/>
+        <result property="merchantAddress" column="merchant_address" jdbcType="VARCHAR"/>
+        <result property="merchantPhone" column="merchant_phone" jdbcType="VARCHAR"/>
+        <result property="lng" column="lng" jdbcType="DOUBLE"/>
+        <result property="lat" column="lat" jdbcType="DOUBLE"/>
+        <result property="merchantDesc" column="merchant_desc" jdbcType="VARCHAR"/>
+        <result property="merchantDiscount" column="merchant_discount" jdbcType="DECIMAL"/>
+        <result property="merchantStatus" column="merchant_status" jdbcType="CHAR"/>
+        <result property="auditRemark" column="audit_remark" jdbcType="VARCHAR"/>
+        <result property="sorting" column="sorting" jdbcType="INTEGER"/>
+        <result property="isDelete" column="is_delete" jdbcType="CHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        merchant_id,merchant_name,merchant_tag,
+        merchant_icon,collect_count,evaluate_count,
+        score,merchant_address,merchant_phone,
+        lng,lat,merchant_desc,
+        merchant_discount,merchant_status,audit_remark,
+        sorting,is_delete,create_time,
+        update_time
+    </sql>
+</mapper>

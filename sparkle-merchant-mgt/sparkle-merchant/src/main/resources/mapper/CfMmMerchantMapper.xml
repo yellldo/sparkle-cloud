@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.merchant.mapper.CfMmMerchantMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.merchant.entity.CfMmMerchant">
+        <id property="merchantId" column="merchant_id" jdbcType="BIGINT"/>
+        <result property="merchantName" column="merchant_name" jdbcType="VARCHAR"/>
+        <result property="merchantPhone" column="merchant_phone" jdbcType="VARCHAR"/>
+        <result property="creditCode" column="credit_code" jdbcType="VARCHAR"/>
+        <result property="merchantAddress" column="merchant_address" jdbcType="VARCHAR"/>
+        <result property="merchantStatus" column="merchant_status" jdbcType="CHAR"/>
+        <result property="licenseAddress" column="license_address" jdbcType="VARCHAR"/>
+        <result property="merchantType" column="merchant_type" jdbcType="CHAR"/>
+        <result property="licenseStart" column="license_start" jdbcType="TIMESTAMP"/>
+        <result property="licenseDeadlineType" column="license_deadline_type" jdbcType="CHAR"/>
+        <result property="licenseUrl" column="license_url" jdbcType="VARCHAR"/>
+        <result property="auditRemark" column="audit_remark" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        merchant_id,merchant_name,merchant_phone,
+        credit_code,merchant_address,merchant_status,
+        license_address,merchant_type,license_start,
+        license_deadline_type,license_url,audit_remark,
+        create_time,update_time
+    </sql>
+</mapper>

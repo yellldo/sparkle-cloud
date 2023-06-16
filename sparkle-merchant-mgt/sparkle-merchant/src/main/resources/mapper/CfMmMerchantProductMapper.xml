@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.merchant.mapper.CfMmMerchantProductMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.merchant.entity.CfMmMerchantProduct">
+        <id property="productId" column="product_id" jdbcType="BIGINT"/>
+        <result property="merchantId" column="merchant_id" jdbcType="BIGINT"/>
+        <result property="productName" column="product_name" jdbcType="VARCHAR"/>
+        <result property="productImg" column="product_img" jdbcType="VARCHAR"/>
+        <result property="productType" column="product_type" jdbcType="CHAR"/>
+        <result property="productStock" column="product_stock" jdbcType="INTEGER"/>
+        <result property="productDesc" column="product_desc" jdbcType="VARCHAR"/>
+        <result property="productStatus" column="product_status" jdbcType="CHAR"/>
+        <result property="amount" column="amount" jdbcType="DECIMAL"/>
+        <result property="discount" column="discount" jdbcType="VARCHAR"/>
+        <result property="productBrand" column="product_brand" jdbcType="CHAR"/>
+        <result property="saleCount" column="sale_count" jdbcType="INTEGER"/>
+        <result property="productModel" column="product_model" jdbcType="VARCHAR"/>
+        <result property="isHot" column="is_hot" jdbcType="CHAR"/>
+        <result property="rackTime" column="rack_time" jdbcType="TIMESTAMP"/>
+        <result property="rackStatus" column="rack_status" jdbcType="CHAR"/>
+        <result property="sendType" column="send_type" jdbcType="VARCHAR"/>
+        <result property="auditStatus" column="audit_status" jdbcType="CHAR"/>
+        <result property="auditRemark" column="audit_remark" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="isDelete" column="is_delete" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        product_id,merchant_id,product_name,
+        product_img,product_type,product_stock,
+        product_desc,product_status,amount,
+        discount,product_brand,sale_count,
+        product_model,is_hot,rack_time,
+        rack_status,send_type,audit_status,
+        audit_remark,create_time,update_time,
+        is_delete
+    </sql>
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.bill.mapper.CfWpUserBalanceConsumeMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.bill.entity.CfWpUserBalanceConsume">
+        <id property="consumerId" column="consumer_id" jdbcType="BIGINT"/>
+        <result property="userId" column="user_id" jdbcType="BIGINT"/>
+        <result property="merchantId" column="merchant_id" jdbcType="BIGINT"/>
+        <result property="amount" column="amount" jdbcType="DECIMAL"/>
+        <result property="refundAmount" column="refund_amount" jdbcType="DECIMAL"/>
+        <result property="userBalance" column="user_balance" jdbcType="VARCHAR"/>
+        <result property="productId" column="product_id" jdbcType="BIGINT"/>
+        <result property="tradeNo" column="trade_no" jdbcType="VARCHAR"/>
+        <result property="refundFlag" column="refund_flag" jdbcType="CHAR"/>
+        <result property="expendType" column="expend_type" jdbcType="CHAR"/>
+        <result property="consumerType" column="consumer_type" jdbcType="CHAR"/>
+        <result property="consumerStatus" column="consumer_status" jdbcType="CHAR"/>
+        <result property="transSuccessTime" column="trans_success_time" jdbcType="TIMESTAMP"/>
+        <result property="transCloseTime" column="trans_close_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="isDelete" column="is_delete" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        consumer_id,user_id,merchant_id,
+        amount,refund_amount,user_balance,
+        product_id,trade_no,refund_flag,
+        expend_type,consumer_type,consumer_status,
+        trans_success_time,trans_close_time,create_time,
+        update_time,is_delete
+    </sql>
+</mapper>

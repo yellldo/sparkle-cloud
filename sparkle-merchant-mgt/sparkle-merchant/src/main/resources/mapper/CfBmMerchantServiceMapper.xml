@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.merchant.mapper.CfBmMerchantServiceMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.merchant.entity.CfBmMerchantService">
+        <id property="serviceId" column="service_id" jdbcType="BIGINT"/>
+        <result property="merchantId" column="merchant_id" jdbcType="BIGINT"/>
+        <result property="serviceName" column="service_name" jdbcType="VARCHAR"/>
+        <result property="serviceDesc" column="service_desc" jdbcType="VARCHAR"/>
+        <result property="serviceAmount" column="service_amount" jdbcType="DECIMAL"/>
+        <result property="auditStatus" column="audit_status" jdbcType="CHAR"/>
+        <result property="auditRemark" column="audit_remark" jdbcType="VARCHAR"/>
+        <result property="rackStatus" column="rack_status" jdbcType="CHAR"/>
+        <result property="rackTime" column="rack_time" jdbcType="TIMESTAMP"/>
+        <result property="isDelete" column="is_delete" jdbcType="CHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        service_id,merchant_id,service_name,
+        service_desc,service_amount,audit_status,
+        audit_remark,rack_status,rack_time,
+        is_delete,create_time,update_time
+    </sql>
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.bill.mapper.CfWpUserWalletMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.bill.entity.CfWpUserWallet">
+        <id property="walletId" column="wallet_id" jdbcType="BIGINT"/>
+        <result property="directionAmount" column="direction_amount" jdbcType="DECIMAL"/>
+        <result property="userId" column="user_id" jdbcType="BIGINT"/>
+        <result property="commonAmount" column="common_amount" jdbcType="DECIMAL"/>
+        <result property="directionAvailableAmount" column="direction_available_amount" jdbcType="DECIMAL"/>
+        <result property="commonAvailableAmount" column="common_available_amount" jdbcType="DECIMAL"/>
+        <result property="totalSaveAmount" column="total_save_amount" jdbcType="DECIMAL"/>
+        <result property="freezeAmount" column="freeze_amount" jdbcType="DECIMAL"/>
+        <result property="createdUser" column="created_user" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="CHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        wallet_id,direction_amount,user_id,
+        common_amount,direction_available_amount,common_available_amount,
+        total_save_amount,freeze_amount,created_user,
+        is_delete,create_time,update_time
+    </sql>
+</mapper>
