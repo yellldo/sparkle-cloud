@@ -1,9 +1,7 @@
-server:
-  port: 8092
-dubbo:
-  registry:
-    address: localhost:2181
-    protocol: zookeeper
 spring:
   application:
     name: sparkle-web
+  profiles:
+    - dev
+server:
+  port: 8092

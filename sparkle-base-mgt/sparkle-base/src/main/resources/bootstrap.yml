@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        namespace: 29fb1eaf-8626-4ad0-952c-bb7a2ef9a572
+        name: dev
+        group: DEFAULT_GROUP
+      discovery:
+        server-addr: localhost:8848
+  profiles:
+    active: dev

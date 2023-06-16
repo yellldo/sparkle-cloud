@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * ClassName : AreaInfoController<br>
- * Description : AreaInfoController<br>
+ * ClassName : AreaInfoCtrl<br>
+ * Description : AreaInfoCtrl<br>
  *
  * @author : sj
  * @date : 2022/3/1
  */
 @RestController
-public class AreaInfoController {
+public class AreaInfoCtrl {
 
     @Autowired
     private AreaInfoService areaInfoService;

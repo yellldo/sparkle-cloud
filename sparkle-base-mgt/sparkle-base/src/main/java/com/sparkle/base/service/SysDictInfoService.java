@@ -1,5 +1,6 @@
 package com.sparkle.base.service;
 
+import com.sparkle.api.base.service.SysDictService;
 import com.sparkle.base.entity.SysDictInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 

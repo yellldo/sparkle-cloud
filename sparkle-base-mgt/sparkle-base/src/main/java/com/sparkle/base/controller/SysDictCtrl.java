@@ -15,18 +15,19 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * ClassName : SysDictController<br>
- * Description : SysDictController<br>
+ * ClassName : SysDictCtrl<br>
+ * Description : SysDictCtrl<br>
  *
  * @author : sj
  * @date : 2022/3/1
  */
 @RestController
-public class SysDictController {
+public class SysDictCtrl implements SysDictService {
 
     @Autowired
     private SysDictInfoService sysDictInfoService;
 
+    @Override
     @GetMapping("querySysDict")
     public R querySysDict(@RequestBody QuerySysDictDto querySysDictDto) {
         LambdaQueryWrapper<SysDictInfo> queryWrapper = new LambdaQueryWrapper<>();
@@ -42,5 +43,6 @@ public class SysDictController {
         List<SysDictInfo> sysDictInfoList = sysDictInfoService.list(queryWrapper);
         return R.ok(sysDictInfoList);
     }
+
 
 }

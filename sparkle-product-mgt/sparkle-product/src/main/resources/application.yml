@@ -1,9 +1,5 @@
 server:
   port: 8091
-dubbo:
-  registry:
-    address: localhost:2181
-    protocol: zookeeper
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver

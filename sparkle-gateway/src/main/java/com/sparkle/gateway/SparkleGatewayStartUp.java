@@ -1,23 +1,22 @@
-package com.sparkle.base;
+package com.sparkle.gateway;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
+
 /**
- * ClassName : SparkleBaseStartUp<br>
- * Description : SparkleBaseStartUp<br>
+ * ClassName : SparkleGatewayStartUp<br>
+ * Description : SparkleGatewayStartUp<br>
  *
  * @author : sj
- * @date : 2022/3/1
+ * @date : 2023/6/16
  */
 @EnableDiscoveryClient
-@MapperScan("com.sparkle.base.mapper")
 @SpringBootApplication
-public class SparkleBaseStartUp {
+public class SparkleGatewayStartUp {
 
     public static void main(String[] args) {
-        SpringApplication.run(SparkleBaseStartUp.class, args);
+        SpringApplication.run(SparkleGatewayStartUp.class, args);
     }
 }
