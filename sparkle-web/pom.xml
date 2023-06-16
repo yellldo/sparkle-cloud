@@ -38,5 +38,10 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.sparkle.cloud</groupId>
+            <artifactId>sparkle-common</artifactId>
+            <version>${version}</version>
+        </dependency>
     </dependencies>
 </project>

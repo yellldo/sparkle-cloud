@@ -6,18 +6,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.RedisConnectionFailureException;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /**
  * ClassName : RedisUtil<br>
- * Description : redis 工具类<br>
+ * Description : RedisUtil<br>
  *
  * @author : sj
- * @version : 1.0.0 2021/8/6
+ * @date : 2023/6/16
  */
 @Slf4j
 public class RedisUtil {
@@ -142,5 +140,4 @@ public class RedisUtil {
         time = time + RandomUtil.randomLong(time);
         return redisTemplate.expire(key, time, timeUnit);
     }
-
 }

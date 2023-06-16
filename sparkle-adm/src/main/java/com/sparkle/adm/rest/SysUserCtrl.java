@@ -1,6 +1,5 @@
 package com.sparkle.adm.rest;
 
-import com.sparkle.adm.dto.SysLoginDto;
 import com.sparkle.domain.R;
 import com.sparkle.feign.user.dto.SysUserRegisterDto;
 import com.sparkle.feign.user.service.SysUserServiceFeign;
@@ -26,21 +25,9 @@ public class SysUserCtrl {
     @Autowired
     private SysUserServiceFeign sysUserServiceFeign;
 
-    /**
-     * @return
-     */
-    @PostMapping("login")
-    public R login(@RequestBody SysLoginDto sysLoginDto) {
-        return R.ok();
-    }
-
-
     @PostMapping("register")
     public R register(@RequestBody SysUserRegisterDto sysUserRegisterDto) {
         sysUserServiceFeign.register(sysUserRegisterDto);
         return R.ok();
-
     }
-
 }
-

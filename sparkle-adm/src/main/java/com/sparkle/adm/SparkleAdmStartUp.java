@@ -14,6 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @author : sj
  * @date : 2023/6/16
  */
+@EnableSwagger2
 @ComponentScan("com.sparkle.feign")
 @EnableDiscoveryClient
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
@@ -23,4 +24,3 @@ public class SparkleAdmStartUp {
         SpringApplication.run(SparkleAdmStartUp.class, args);
     }
 }
-
