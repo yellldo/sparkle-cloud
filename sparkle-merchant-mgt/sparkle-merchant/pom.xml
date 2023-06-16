@@ -50,5 +50,10 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.sparkle.cloud</groupId>
+            <artifactId>sparkle-merchant-api</artifactId>
+            <version>${version}</version>
+        </dependency>
     </dependencies>
 </project>

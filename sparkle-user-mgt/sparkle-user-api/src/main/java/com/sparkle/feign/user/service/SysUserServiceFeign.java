@@ -16,9 +16,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient(value = "sparkle-user", path = "/user")
 public interface SysUserServiceFeign {
 
-
+    /**
+     * 注册
+     *
+     * @param sysUserRegisterDto
+     * @return
+     */
     @PostMapping("/sysUser/register")
-    public R register(@RequestBody SysUserRegisterDto sysUserRegisterDto);
+    R register(@RequestBody SysUserRegisterDto sysUserRegisterDto);
 
 
 }

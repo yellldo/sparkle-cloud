@@ -27,7 +27,6 @@ public class SysUserCtrl {
 
     @PostMapping("register")
     public R register(@RequestBody SysUserRegisterDto sysUserRegisterDto) {
-        sysUserServiceFeign.register(sysUserRegisterDto);
-        return R.ok();
+        return sysUserServiceFeign.register(sysUserRegisterDto);
     }
 }

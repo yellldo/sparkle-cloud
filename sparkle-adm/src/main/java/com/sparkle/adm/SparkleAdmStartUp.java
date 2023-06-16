@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -15,8 +16,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @date : 2023/6/16
  */
 @EnableSwagger2
-@ComponentScan("com.sparkle.feign")
+@ComponentScan({"com.sparkle.adm"})
 @EnableDiscoveryClient
+@EnableFeignClients("com.sparkle.feign")
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 public class SparkleAdmStartUp {
 
