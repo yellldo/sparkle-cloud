@@ -1,16 +1,16 @@
 spring:
   cloud:
     nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
       config:
-        server-addr: localhost:8848
+        server-addr: 127.0.0.1:8848
         namespace: 29fb1eaf-8626-4ad0-952c-bb7a2ef9a572
         prefix: ${spring.application.name}-${spring.profiles.active}
         file-extension: yaml
-      discovery:
-        server-addr: localhost:8848
   application:
-    name: sparkle-base
+    name: sparkle-product
   profiles:
     active: dev
 server:
-  port: 9099
+  port: 8091
