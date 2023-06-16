@@ -30,7 +30,7 @@ public class SysUserBiz {
     public void register(SysUserRegisterDto sysUserRegisterDto) {
         LambdaQueryWrapper<SysUser> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(SysUser::getLoginName, sysUserRegisterDto.getLoginName());
-        int count = sysUserService.count(queryWrapper);
+        long count = sysUserService.count(queryWrapper);
         if (count > 0) {
             throw new BusinessException("账户已存在");
         }

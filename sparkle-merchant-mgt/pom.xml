@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>sparkle-merchant-mgt</artifactId>
-
+    <packaging>pom</packaging>
     <modules>
         <module>sparkle-merchant</module>
         <module>sparkle-merchant-api</module>

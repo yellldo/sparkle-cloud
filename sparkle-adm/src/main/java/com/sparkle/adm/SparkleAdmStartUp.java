@@ -2,7 +2,10 @@ package com.sparkle.adm;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.ComponentScan;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * ClassName : SparkleAdmStartUp<br>
@@ -11,8 +14,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @author : sj
  * @date : 2023/6/16
  */
+@ComponentScan("com.sparkle.feign")
 @EnableDiscoveryClient
-@SpringBootApplication
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 public class SparkleAdmStartUp {
 
     public static void main(String[] args) {

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @author : sj
  * @date : 2023/6/16
  */
-@FeignClient("sparkle-user")
+@FeignClient(value = "sparkle-user", path = "/user")
 public interface SysUserServiceFeign {
 
 

@@ -3,6 +3,7 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+        namespace: 29fb1eaf-8626-4ad0-952c-bb7a2ef9a572
       config:
         server-addr: 127.0.0.1:8848
         namespace: 29fb1eaf-8626-4ad0-952c-bb7a2ef9a572
@@ -14,6 +15,8 @@ spring:
     active: dev
 server:
   port: 8092
+  servlet:
+    context-path: /user
 id:
   workerId: 1
   datacenterId: 1
