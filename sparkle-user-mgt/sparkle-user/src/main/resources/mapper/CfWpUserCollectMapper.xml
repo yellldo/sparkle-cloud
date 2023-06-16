@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.user.mapper.CfWpUserCollectMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.user.entity.CfWpUserCollect">
+        <id property="collectId" column="collect_id" jdbcType="BIGINT"/>
+        <result property="userId" column="user_id" jdbcType="BIGINT"/>
+        <result property="collectType" column="collect_type" jdbcType="CHAR"/>
+        <result property="targetId" column="target_id" jdbcType="BIGINT"/>
+        <result property="isDelete" column="is_delete" jdbcType="CHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        collect_id,user_id,collect_type,
+        target_id,is_delete,create_time,
+        update_time
+    </sql>
+</mapper>

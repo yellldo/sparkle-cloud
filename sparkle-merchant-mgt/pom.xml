@@ -11,10 +11,22 @@
 
     <artifactId>sparkle-merchant-mgt</artifactId>
 
+    <modules>
+        <module>sparkle-merchant</module>
+        <module>sparkle-merchant-api</module>
+    </modules>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.sparkle.cloud</groupId>
+            <artifactId>sparkle-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

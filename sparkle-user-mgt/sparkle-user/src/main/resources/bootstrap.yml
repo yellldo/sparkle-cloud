@@ -14,3 +14,6 @@ spring:
     active: dev
 server:
   port: 8092
+id:
+  workerId: 1
+  datacenterId: 1

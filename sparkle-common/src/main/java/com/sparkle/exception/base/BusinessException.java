@@ -30,4 +30,8 @@ public class BusinessException extends BaseException {
     public BusinessException(R r) {
         super(r);
     }
+
+    public BusinessException(String message) {
+        super(message);
+    }
 }

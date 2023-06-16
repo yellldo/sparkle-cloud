@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.user.mapper.CfMmMerchantUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.user.entity.CfMmMerchantUser">
+        <id property="merchantUserId" column="merchant_user_id" jdbcType="BIGINT"/>
+        <result property="accountNumber" column="account_number" jdbcType="VARCHAR"/>
+        <result property="nickName" column="nick_name" jdbcType="VARCHAR"/>
+        <result property="isMaster" column="is_master" jdbcType="CHAR"/>
+        <result property="userStatus" column="user_status" jdbcType="CHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="isDelete" column="is_delete" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        merchant_user_id,account_number,nick_name,
+        is_master,user_status,create_time,
+        update_time,is_delete
+    </sql>
+</mapper>

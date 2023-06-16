@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.sparkle.merchant.mapper.CfBmMerchantServiceMapper">
+<mapper namespace="com.sparkle.merchant.mapper.CfBmMerchantServeMapper">
 
-    <resultMap id="BaseResultMap" type="com.sparkle.merchant.entity.CfBmMerchantService">
+    <resultMap id="BaseResultMap" type="com.sparkle.merchant.entity.CfBmMerchantServe">
         <id property="serviceId" column="service_id" jdbcType="BIGINT"/>
         <result property="merchantId" column="merchant_id" jdbcType="BIGINT"/>
         <result property="serviceName" column="service_name" jdbcType="VARCHAR"/>

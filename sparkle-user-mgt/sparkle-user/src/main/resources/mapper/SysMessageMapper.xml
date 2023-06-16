@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.user.mapper.SysMessageMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.user.entity.SysMessage">
+        <id property="messageId" column="message_id" jdbcType="BIGINT"/>
+        <result property="userId" column="user_id" jdbcType="BIGINT"/>
+        <result property="messageTitle" column="message_title" jdbcType="VARCHAR"/>
+        <result property="messageContent" column="message_content" jdbcType="VARCHAR"/>
+        <result property="messageType" column="message_type" jdbcType="CHAR"/>
+        <result property="messageStatus" column="message_status" jdbcType="CHAR"/>
+        <result property="replyUserId" column="reply_user_id" jdbcType="BIGINT"/>
+        <result property="targetId" column="target_id" jdbcType="BIGINT"/>
+        <result property="isDelete" column="is_delete" jdbcType="CHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        message_id,user_id,message_title,
+        message_content,message_type,message_status,
+        reply_user_id,target_id,is_delete,
+        create_time,update_time
+    </sql>
+</mapper>

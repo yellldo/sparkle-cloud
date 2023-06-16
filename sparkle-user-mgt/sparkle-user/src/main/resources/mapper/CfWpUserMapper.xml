@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.user.mapper.CfWpUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.user.entity.CfWpUser">
+        <id property="userId" column="user_id" jdbcType="BIGINT"/>
+        <result property="accountNumber" column="account_number" jdbcType="VARCHAR"/>
+        <result property="nickName" column="nick_name" jdbcType="VARCHAR"/>
+        <result property="userGender" column="user_gender" jdbcType="CHAR"/>
+        <result property="userSignature" column="user_signature" jdbcType="VARCHAR"/>
+        <result property="cadeId" column="cade_id" jdbcType="BIGINT"/>
+        <result property="sourceCode" column="source_code" jdbcType="CHAR"/>
+        <result property="inviteCode" column="invite_code" jdbcType="CHAR"/>
+        <result property="invitedCode" column="invited_code" jdbcType="CHAR"/>
+        <result property="roleId" column="role_id" jdbcType="BIGINT"/>
+        <result property="registerChannel" column="register_channel" jdbcType="CHAR"/>
+        <result property="userStatus" column="user_status" jdbcType="CHAR"/>
+        <result property="isVip" column="is_vip" jdbcType="CHAR"/>
+        <result property="inviteCount" column="invite_count" jdbcType="INTEGER"/>
+        <result property="walletId" column="wallet_id" jdbcType="BIGINT"/>
+        <result property="userIcon" column="user_icon" jdbcType="VARCHAR"/>
+        <result property="commonEquipment" column="common_equipment" jdbcType="VARCHAR"/>
+        <result property="paymentPassword" column="payment_password" jdbcType="VARCHAR"/>
+        <result property="userType" column="user_type" jdbcType="CHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="CHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        user_id,account_number,nick_name,
+        user_gender,user_signature,cade_id,
+        source_code,invite_code,invited_code,
+        role_id,register_channel,user_status,
+        is_vip,invite_count,wallet_id,
+        user_icon,common_equipment,payment_password,
+        user_type,is_delete,create_time,
+        update_time
+    </sql>
+</mapper>

@@ -15,9 +15,8 @@
         <module>sparkle-gateway</module>
         <module>sparkle-user-mgt</module>
         <module>sparkle-merchant-mgt</module>
-        <module>sparkle-merchant-mgt/sparkle-merchant</module>
-        <module>sparkle-merchant-mgt/sparkle-merchant-api</module>
         <module>sparkle-bill-mgt</module>
+        <module>sparkle-adm</module>
     </modules>
 
     <properties>

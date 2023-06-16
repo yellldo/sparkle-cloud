@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sparkle.user.mapper.SysUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.sparkle.user.entity.SysUser">
+        <id property="userId" column="user_id" jdbcType="BIGINT"/>
+        <result property="loginName" column="login_name" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="nickName" column="nick_name" jdbcType="VARCHAR"/>
+        <result property="userStatus" column="user_status" jdbcType="CHAR"/>
+        <result property="errorCount" column="error_count" jdbcType="INTEGER"/>
+        <result property="roleId" column="role_id" jdbcType="BIGINT"/>
+        <result property="resetFlag" column="reset_flag" jdbcType="CHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="isDelete" column="is_delete" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        user_id,login_name,password,
+        nick_name,user_status,error_count,
+        role_id,reset_flag,create_time,
+        update_time,is_delete
+    </sql>
+</mapper>

@@ -142,3 +142,21 @@ create table dict_info
 
 create index dict_info_dict_type_index
     on dict_info (dict_type);
+
+drop table if exists sys_user;
+create table sys_user
+(
+    user_id     bigint(32)                         not null comment '主键'
+        primary key,
+    login_name  varchar(30)                        not null comment '账号',
+    password    varchar(100)                       not null comment '密码',
+    nick_name   varchar(20)                        null comment '昵称',
+    user_status char     default '0'               null comment '状态 0、正常 1、禁用',
+    error_count int      default 0                 null comment '错误次数',
+    role_id     bigint(32)                         null comment '角色id',
+    reset_flag  char     default '1'               null comment '重置密码标志位 0、否 1、是',
+    create_time datetime default CURRENT_TIMESTAMP null comment '创建时间',
+    update_time datetime                           null comment '修改时间',
+    is_delete   char     default '0'               null comment '删除标志位 0、未删除 1、已删除'
+)
+    comment '后台用户表' charset = utf8mb4;
