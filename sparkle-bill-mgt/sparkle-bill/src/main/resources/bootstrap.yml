@@ -13,7 +13,3 @@ spring:
     name: sparkle-bill
   profiles:
     active: dev
-server:
-  port: 8093
-  servlet:
-    context-path: /bill
